@@ -16,7 +16,7 @@ body {
 }
 
 .left-bar {
-    width: 25%;
+    width: 23%;
     min-height: 100vh;
     border-right: solid 1px #2F3336;
     padding: 10px 60px;
@@ -37,13 +37,158 @@ body {
 }
 
 .left-icon {
-    color: #F3F9FD;
-    font-size: 28px;
+    color: #edf2f5;
+    font-size: 26px;
     margin: 0 15px 0 0;
 }
 
 .left-paragraph {
-    color: #F3F9FD;
+    color: #edf2f5;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
+
+.tweet-btn {
+    background-color: #1DA1F2;
+    color: #fff;
+    border: none;
+    padding: 18px 85px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease 0.2s;
+}
+
+.tweet-btn:hover {
+    background-color: #1c84d4;
+}
+
+
+.middle {
+    width: 50%;
+    min-height: 100vh;
+    border-right: solid 1px #2F3336;
+}
+
+.post-container {
+    padding: 40px 20px;
+    border-top: solid 1px #2F3336;
+    border-bottom: solid 1px #2F3336;
+}
+
+.post-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 0 13px 0 0;
+}
+
+.profile-container {
+    display: flex;
+    margin: 0 0 20px 0;
+}
+
+.name {
+    color: #D3D3D3;
+}
+
+.username {
+    color: #9ba0a3;
+}
+
+.post-content {
+    color: #D3D3D3;   
+    font-size: 23px;
+    margin: 0 0 15px 0;
+}
+
+.post-details {
+    display: flex;
+}
+
+.post-detail {
+    color: #6E767D;   
+    margin: 0 10px 20px 0;
+}
+
+.hr {
+    height: 1px;
+    background-color: #2F3336;
+    color: #2F3336;
+    border: #2F3336;
+    margin: 0 0 15px 0;
+}
+
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: space-evenly;   
+    margin: 0 0 15px 0;
+}
+
+.middle-icon {
+    color: #6E767D;
+    font-size: 19px;
+    margin: 0 15px 0 0;  
+    cursor: pointer;
+}
+
+.comment-container {
+    padding: 10px 20px;
+    border-top: solid 1px #2F3336;
+    border-bottom: solid 1px #2F3336;   
+}
+
+.commentName-container {
+    
+}
+
+.commentName-container .name,
+.commentName-container .username {
+    margin: 0 5px 0 0;
+    display: inline;
+    height: 0;
+}
+
+.comment-img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 0 13px 0 0;
+}
+
+.date {
+    color: #6E767D;
+}
+
+.comment-answer {
+    color: #6E767D;
+    flex-direction: column;
+}
+
+.comment-answer a {
+    color: #156596;
+}
+
+.comment {
+    color: #D3D3D3;
+    margin: 0 0 20px 0;
+}
+
+.comment-icons {
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.comment-icons .middle-icon {
+    margin: 0 80px 0 0px;
+}
+

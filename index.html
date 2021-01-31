@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/6465650075.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="left-bar">
             <img src="twitter-logo.png" alt="" class="twitter-logo">
             <div class="icon-container">
@@ -35,10 +35,7 @@
             <div class="icon-container">
                 <i class="far fa-user left-icon"></i><p class="left-paragraph">Perfil</p>
             </div>
-            <div class="icon-container">
-                <i></i><p></p>
-            </div>
-            <button class="tweet-btn"></button>
+            <button class="tweet-btn">Tweetar</button>
             <img src="" alt="">
             <div class="name-container">
                 <h4 class="name"></h4>
@@ -47,44 +44,53 @@
         </div>
         <div class="middle">
             <div class="post-container">
-                <img src="" alt="">
-                <div class="postName-container">
-                    <h4 class="name"></h4>
-                    <p class="username"></p>
+                <div class="profile-container">
+                    <img src="profile.png" alt="" class="post-img">
+                    <div class="name-container">
+                        <h4 class="name">Eren Jaeger</h4>
+                        <p class="username">@jaegereren</p>
+                    </div>
                 </div>
-                <p class="post-content"></p>
+                <p class="post-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi harum atque qui a, rem tempora?</p>
                 <div class="post-details">
-                    <p class="post-hour"></p>
-                    <p class="post-date"></p>
+                    <p class="post-detail">8:04 AM</p>
+                    <p class="post-detail">·</p>
+                    <p class="post-detail">25 de jan de 2021</p>
+                    <p class="post-detail">·</p>
+                    <p class="post-detail">Twitter Web App</p>
                 </div>
+                <hr class="hr">
                 <div class="post-stats">
                     <h3 class="post-retweets"></h3>
                     <h3 class="post-comments"></h3>
                     <h3 class="post-likes"></h3>
                 </div>
                 <div class="post-icons">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i>
+                    <i class="far fa-comment middle-icon"></i>
+                    <i class="fas fa-retweet middle-icon"></i>
+                    <i class="far fa-heart middle-icon"></i>
+                    <i class="fas fa-upload middle-icon"></i>
                 </div>
+                <hr class="hr">
             </div>  
             <div class="comment-container">
-                <img src="" alt="">
-                <div class="commentName-container">
-                    <h4 class="name"></h4>
-                    <p class="username"></p> 
-                    <p class="date"></p>   
-                </div>
-                <p class="comment-answer"></p>
-                <p class="comment">
-
-                </p>
-                <div class="comment-icons">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                    <i></i> 
+                    <div class="profile-container">
+                        <img src="profile.png" alt="" class="comment-img">
+                        <div class="commentName-container">
+                            <h4 class="name">Eren Jaeger </h4>
+                            <p class="username">@jaegereren · 10 h</p> 
+                            <p class="comment-answer">Em resposta a <a href="">@jaegereren</a></p>
+                            <p class="comment">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident atque voluptatibus excepturi, aliquid reiciendis optio..
+                            </p> 
+                            <div class="comment-icons">
+                                <i class="far fa-comment middle-icon"></i>
+                                <i class="fas fa-retweet middle-icon"></i>
+                                <i class="far fa-heart middle-icon"></i>
+                                <i class="fas fa-upload middle-icon"></i>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>    
         </div>
