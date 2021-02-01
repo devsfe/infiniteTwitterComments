@@ -182,6 +182,8 @@ body {
 .comment {
     color: #D3D3D3;
     margin: 0 0 20px 0;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .comment-icons {
@@ -264,12 +266,15 @@ body {
     .container {
         width: 100%;
     }
+    
     .left-bar {
         display: none;
+        width: 0;
     }
 
     .middle {
         width: 100%;
+        
     }
 
     .tweet-btn,
@@ -280,5 +285,20 @@ body {
     .icon-container {
         margin: 0 5px;
     }
+
+    .comment {
+        font-size: 14px;
+        max-width: 75%;
+    }
+
+    .fa-upload {
+        display: none;
+    }
 }
+
+@media(max-width: 320px) {
+    .middle {
+        width: 120%;
+    }    
+}    
 

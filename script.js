@@ -61,7 +61,6 @@ async function showUser() {
                 <i class="far fa-comment middle-icon"></i>
                 <i class="fas fa-retweet middle-icon"></i>
                 <i class="far fa-heart middle-icon"></i>
-                <i class="fas fa-upload middle-icon"></i>
             </div>
         </div>` 
 
