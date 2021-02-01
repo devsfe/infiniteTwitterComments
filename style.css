@@ -145,10 +145,6 @@ body {
     border-bottom: solid 1px #2F3336;   
 }
 
-.commentName-container {
-    
-}
-
 .commentName-container .name,
 .commentName-container .username {
     margin: 0 5px 0 0;
@@ -190,5 +186,43 @@ body {
 
 .comment-icons .middle-icon {
     margin: 0 80px 0 0px;
+}
+
+
+/* === Responsividade === */
+@media(max-width: 1300px) {
+    .left-paragraph {
+        display: none;
+    }
+
+    .tweet-btn {
+        padding: 18px 10px;   
+    }
+
+    .middle {
+        width: 70%;
+    }
+}
+
+@media(max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+    .left-bar {
+        display: none;
+    }
+
+    .middle {
+        width: 100%;
+    }
+
+    .tweet-btn,
+    .twitter-logo {
+        display: none;
+    }
+
+    .icon-container {
+        margin: 0 5px;
+    }
 }
 
