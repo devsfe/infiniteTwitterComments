@@ -4,11 +4,9 @@ const loader = document.getElementById('loader');
 let limit = 6;
 let page = 1;
 
-
 // show loadder
 function showLoader() {
     
-
     loader.classList.add('active');
 
     setTimeout(() => {
@@ -31,8 +29,8 @@ async function getRandomUser() {
     return data
 }
 
-// fetch and get random message
-async function getRandomMessage() {
+// fetch and get random comment
+async function getRandomComment() {
     const res = await fetch (`https://jsonplaceholder.typicode.com/comments?_limit=500_page=${page}`);
 
     const data = await res.json();
@@ -40,7 +38,7 @@ async function getRandomMessage() {
     return data;
 }
 
-// show posts
+// show user & comment
 async function showUser() {
     const user = await getRandomUser();
 
@@ -55,7 +53,7 @@ async function showUser() {
                 <p class="username">@${post.login.username} · 10 h</p> 
                 <p class="comment-answer">Em resposta a <a href="">@jaegereren</a></p>
                 <p class="comment"> 
-                       lol
+                       Aguarde, comentário ainda não carregado. Tente esperar um pouco ou atualizar a página.
                 </p> 
             <div class="comment-icons">
                 <i class="far fa-comment middle-icon"></i>
@@ -71,20 +69,20 @@ async function showUser() {
         
     }); 
 
-    const messages = await getRandomMessage();
+    const randomComment = await getRandomComment();
 
-    const messages2 = [...messages];
+    var randomCommentArr = [...randomComment];
 
-    
-    for(let i = 0; i < messages2.length; i++) {
-            var teste = document.querySelectorAll('.comment');
+    for(let i = 0; i < randomCommentArr.length; i++) {
+            const paragraph = document.querySelectorAll('.comment');
 
-            teste[i].innerText = messages[i].body
+            paragraph[i].innerText = randomComment[i].body
     }
 }
 
 showUser();
 
+// show loader, user & comment on scroll
 window.addEventListener('scroll', () => {
     const { scrollTop, scrollHeight, clientHeight} = document.documentElement;
 
