@@ -1,9 +1,30 @@
 const middle = document.getElementById('middle');
+const loader = document.getElementById('loader');
 
+let limit = 6;
+let page = 1;
+
+
+// show loadder
+function showLoader() {
+    
+
+    loader.classList.add('active');
+
+    setTimeout(() => {
+        loader.classList.remove('active');
+
+        setTimeout(() => {
+            page++;
+            showUser();
+        }, 700);
+
+    }, 1500);
+}
 
 // fetch and get random user
 async function getRandomUser() {
-    const res = await fetch('https://randomuser.me/api/?page=1&results=10&seed=abc');
+    const res = await fetch(`https://randomuser.me/api/?page=${page}&results=${limit}&seed=abc`);
 
     const data = await res.json();
 
@@ -12,7 +33,7 @@ async function getRandomUser() {
 
 // fetch and get random message
 async function getRandomMessage() {
-    const res = await fetch (`https://jsonplaceholder.typicode.com/comments?_limit=10&_page=1`);
+    const res = await fetch (`https://jsonplaceholder.typicode.com/comments?_limit=500_page=${page}`);
 
     const data = await res.json();
 
@@ -45,6 +66,9 @@ async function showUser() {
         </div>` 
 
         middle.appendChild(commentContainer); 
+
+        // insert loader in DOM
+        middle.insertBefore(loader, commentContainer.nextSibling);
         
     }); 
 
@@ -61,6 +85,14 @@ async function showUser() {
 }
 
 showUser();
+
+window.addEventListener('scroll', () => {
+    const { scrollTop, scrollHeight, clientHeight} = document.documentElement;
+
+    if(scrollTop + clientHeight >= scrollHeight - 5) {
+        showLoader();
+    }
+});
 
 
 
